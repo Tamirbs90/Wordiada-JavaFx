@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Wordiada:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Wordiada_jar</output-path>
+    <root id="archive" name="Wordiada.jar">
+      <element id="module-output" name="Wordiada" />
+    </root>
+  </artifact>
+</component>

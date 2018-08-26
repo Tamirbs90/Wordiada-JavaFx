@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControlPnanel">
+   <center>
+      <ScrollPane fitToHeight="true" fitToWidth="true" BorderPane.alignment="CENTER">
+         <content>
+            <GridPane fx:id="pane">
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </center>
+   <right>
+      <ScrollPane prefHeight="474.0" prefWidth="196.0" BorderPane.alignment="CENTER">
+         <content>
+            <VBox prefHeight="479.0" prefWidth="176.0" spacing="3.0">
+               <children>
+                  <Label fx:id="numOfPlays">
+                     <graphic>
+                        <Label text="Total plays:" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="playerName">
+                     <graphic>
+                        <Label text="Name: " />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="playerId">
+                     <graphic>
+                        <Label text="Id:" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="playerType">
+                     <graphic>
+                        <Label text="Type:" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="playerPoints">
+                     <graphic>
+                        <Label text="Points: " />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="playerWords">
+                     <graphic>
+                        <Label text="Number Of Words:" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="wordComposed">
+                     <graphic>
+                        <Label text="Words composed: " />
+                     </graphic>
+                  </Label>
+                  <ListView fx:id="wordComposedList" prefHeight="117.0" prefWidth="147.0" />
+                  <Label text="Player List:" />
+                  <ListView fx:id="playerList" prefHeight="139.0" prefWidth="147.0" />
+                  <FlowPane prefHeight="53.0" prefWidth="147.0">
+                     <children>
+                        <Button fx:id="nextbtn" disable="true" mnemonicParsing="false" onAction="#next" text="Next Frame" />
+                        <Button fx:id="prevbtn" disable="true" mnemonicParsing="false" onAction="#prev" text="Prev Frame" />
+                     </children>
+                  </FlowPane>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </right>
+   <left>
+      <ScrollPane prefHeight="479.0" prefWidth="194.0" BorderPane.alignment="CENTER">
+         <content>
+            <VBox prefHeight="345.0" prefWidth="191.0" spacing="3.0">
+               <children>
+                  <Label fx:id="boardSize">
+                     <graphic>
+                        <Label text="Board Size:" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="goldenFish">
+                     <graphic>
+                        <Label text="Golden Fish Mode: " />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="gameType">
+                     <graphic>
+                        <Label text="Game Type: " />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="winningAccording">
+                     <graphic>
+                        <Label text="Winning According:" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="stashSize">
+                     <graphic>
+                        <Label text="Spare-Tile Size:" />
+                     </graphic>
+                  </Label>
+                  <Label>
+                     <graphic>
+                        <Label text="Spare Tile Friquensiess: " />
+                     </graphic>
+                  </Label>
+                  <ListView fx:id="spareTaleFric" prefHeight="123.0" prefWidth="191.0" />
+                  <Label>
+                     <graphic>
+                        <Label text="Rare Words: " />
+                     </graphic>
+                  </Label>
+                  <ListView fx:id="rareDic" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </left>
+   <top>
+      <ScrollPane prefHeight="40.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <content>
+            <HBox prefHeight="36.0" prefWidth="784.0" spacing="3.0">
+               <children>
+                  <Region prefHeight="25.0" prefWidth="7.0" />
+                  <MenuButton mnemonicParsing="false" text="Style">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#blueStyle" text="Blue" />
+                      <MenuItem mnemonicParsing="false" onAction="#redStyle" text="Red" />
+                        <MenuItem mnemonicParsing="false" onAction="#coolStyle" text="Exotic" />
+                    </items>
+                  </MenuButton>
+                  <Region prefHeight="26.0" prefWidth="119.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="loadXmlbtn" mnemonicParsing="false" onAction="#loadXml" text="Load Xml" />
+                  <Button fx:id="startGamebtn" disable="true" mnemonicParsing="false" onAction="#startGame" text="Start Game" />
+                  <Button fx:id="quitGamebtn" disable="true" mnemonicParsing="false" onAction="#quitGame" text="Quit Game" />
+                  <Region prefHeight="25.0" prefWidth="43.0" />
+                  <Button fx:id="throwCubebtn" disable="true" mnemonicParsing="false" onAction="#throwCube" text="Throw Cube" />
+                  <Button fx:id="selectSubmitbtn" disable="true" mnemonicParsing="false" onAction="#expose" text="Submit Select" />
+                  <Button fx:id="testWordbtn" disable="true" mnemonicParsing="false" onAction="#testWord" text="Test Word" />
+                  <Region prefHeight="25.0" prefWidth="10.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </content>
+      </ScrollPane>
+   </top>
+   <bottom>
+      <ScrollPane prefHeight="42.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <content>
+            <VBox prefHeight="35.0" prefWidth="730.0">
+               <children>
+                  <Label fx:id="massages" contentDisplay="CENTER" prefHeight="24.0" prefWidth="724.0" />
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </bottom>
+</BorderPane>
